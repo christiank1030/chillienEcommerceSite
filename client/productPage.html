@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shirts</title>
+        <link rel="stylesheet" href="product.css">
+    </head>
+    <body>
+        <!-- nav bar -->
+        <div class="navBar">
+            <img class="navBarLogo" src="./images/chillien-name.png" alt="">
+            <a class="navLink" id="homeLink" href="./index.html">Home</a>
+            <a class="navLink" id="shirtLink" href="./product.html">Shirts</a>
+            <a class="navLink" id="aboutLink" href="">About</a>
+            <a class="navLink" id="contactLink" href="">Contact</a>
+            <input class="searchBar" type="text">
+            <button class="searchButton">Search</button>
+        </div>
+
+        <!-- product page -->
+        <div class="wholeProductPage">
+        <div class="pathContainer">
+            <a class="productPath" href="product.html">Shirts</a>
+            <h1 class="productPath">></h1>
+            <h1 class="productPath">Chillien Smiley Face</h1>
+        </div>
+
+        <div class="productFull">
+
+            <div class="picAndPrice">
+                <img class="fullImg" src="./images/smileyFace1.jpeg" alt="">
+                <div>
+                    <h1 class="fullProductTitle">Chillien Smiley Face</h1>
+
+                    <hr size="1" width="100%" color="white">
+
+                    <p class="productPrice2">$20.00</p>
+
+                    <input type="radio" name="size" value="s" checked hidden id="smallSize">
+                    <label for="smallSize" class="sizeButton Checked">S</label>
+                    <input type="radio" name="size" value="m" hidden id="mediumSize">
+                    <label for="mediumSize" class="sizeButton">M</label>
+                    <input type="radio" name="size" value="l" hidden id="largeSize">
+                    <label for="largeSize" class="sizeButton">L</label>
+                    <input type="radio" name="size" value="xl" hidden id="xlSize">
+                    <label for="xlSize" class="sizeButton">XL</label>
+                    <input type="radio" name="size" value="2xl" hidden id="2xlSize">
+                    <label for="2xlSize" class="sizeButton">2XL</label>
+                    
+                    <div class="addCartSection">
+                        <input class="quantityInput" type="number" placeholder="1">
+                        <button class="cartButton">Add to Cart</button>
+                    </div>  
+                </div>
+            </div>
+
+            <img class="productSlide" id="productSlide1" src="./images/smileyFace1.jpeg" alt="">
+            <img class="productSlide" id="productSlide2" src="./images/smileyFace2.jpeg" alt="">
+            <img class="productSlide" id="productSlide3" src="./images/smileyFace3.jpeg" alt="">
+            <img class="productSlide" id="productSlide4" src="./images/smileyFace4.jpeg" alt="">
+        </div>
+        </div>
+
+        <script src="product.js"></script>
+    </body>
+</html>
