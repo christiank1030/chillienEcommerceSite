@@ -4,8 +4,10 @@ const admin = require('firebase-admin');
 const bcrypt = require('bcrypt');
 require('dotenv').config();
 
+
+
 // Importing functions from controller.js
-const { getHTML, getSignup } = require('./controller');
+const { getHTML, getSignup, signupData } = require('./controller');
 
 const app = express();
 
@@ -17,7 +19,7 @@ app.use(express.static('client'));
 
 app.get('/', getHTML);
 app.get('/signup', getSignup);
-app.post('signup', )
+app.post('/signup', signupData)
 
 const port = 3000
 

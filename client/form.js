@@ -7,6 +7,24 @@ const loginLink = document.querySelector('.loginLink');
 const alertImg = document.querySelector('.alertImg');
 const errorMsg = document.querySelector('.errorMessage');
 
+
+const sendData = (path, data) => {
+    fetch(path, {
+        method: 'post',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify(data)
+    }).then((res) => res.json())
+    .then(response => {
+        processData(response)
+    })
+}
+
+const processData = (data) => {
+    if(data.alert) {
+        showAlert(data.alert)
+    }
+}
+
 const showAlert = (alert) => {
     // hide input forms
     fullName.classList.add('hide');
@@ -33,22 +51,9 @@ const showAlert = (alert) => {
     }, 3000);
 }
 
-const processData = (data) => {
-    if(data.alert) {
-        showAlert(data.alert)
-    }
-}
 
-const sendData = (path, data) => {
-    fetch(path, {
-        method: 'post',
-        headers: new Headers({'Content-Type': 'application/json'}),
-        body: JSON.stringify(data)
-    }).then((res) => res.json())
-    .then(response => {
-        processData(response)
-    })
-}
+
+
 
 createAcctBtn.addEventListener('click', () => {
     // form validations

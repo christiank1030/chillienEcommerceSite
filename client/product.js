@@ -1,17 +1,3 @@
-
-// size function
-
-const sizeButton = document.querySelectorAll('.sizeButton')
-let checkedButton = 0
-
-    sizeButton.forEach((item, i) => {
-        item.addEventListener('click', () => {
-            sizeButton[checkedButton].classList.remove('Checked');
-            item.classList.add('Checked');
-            checkedButton = i;
-        })
-    })
-
 // opening full product details -- LEFT OFF HERE
 const body = document.querySelector('body')
 
@@ -101,17 +87,30 @@ for(let i = 0; i < productImg.length; i++) {
     // image gallery
     const productFunction = () => {
         setTimeout(function() {
-            const displayImg = document.querySelector('.fullImg')
+            // size function
+
+        const sizeButton = document.querySelectorAll('.sizeButton')
+        let checkedButton = 0
+
+        sizeButton.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                sizeButton[checkedButton].classList.remove('Checked');
+                item.classList.add('Checked');
+                checkedButton = i;
+            })
+        })
+
+        const displayImg = document.querySelector('.fullImg')
             
-            const wholeProductPage = document.querySelector('.wholeProductPage')
+        const wholeProductPage = document.querySelector('.wholeProductPage')
             
             
-            const productSlide1 = document.getElementById('productSlide1')
-            const productSlide2 = document.getElementById('productSlide2')
-            const productSlide3 = document.getElementById('productSlide3')
-            const productSlide4 = document.getElementById('productSlide4')
+        const productSlide1 = document.getElementById('productSlide1')
+        const productSlide2 = document.getElementById('productSlide2')
+        const productSlide3 = document.getElementById('productSlide3')
+        const productSlide4 = document.getElementById('productSlide4')
         
-            const originalHTML = `        <!-- nav bar -->
+        const originalHTML = `        <!-- nav bar -->
             <div class="navBar">
                 <img class="navBarLogo" src="./images/chillien-name.png" alt="">
                 <a class="navLink" id="homeLink" href="./index.html">Home</a>
@@ -166,7 +165,7 @@ for(let i = 0; i < productImg.length; i++) {
             </div>
             </div>
         
-            <script src="product.js"></script>`
+        <script src="product.js"></script>`
             
             
             displayImg.addEventListener('click', () => {
@@ -238,7 +237,7 @@ for(let i = 0; i < productImg.length; i++) {
                 let xButton = document.querySelector('.xButton')
                 xButton.addEventListener('click', () => {
                     body.innerHTML = originalHTML
-                    productFunction()
+                    productFunction
                 })
                 })
             })
@@ -246,6 +245,18 @@ for(let i = 0; i < productImg.length; i++) {
     }
 
     setTimeout(function() {
+    // size function
+
+    const sizeButton = document.querySelectorAll('.sizeButton')
+    let checkedButton = 0
+
+        sizeButton.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                sizeButton[checkedButton].classList.remove('Checked');
+                item.classList.add('Checked');
+                checkedButton = i;
+            })
+        })
     const displayImg = document.querySelector('.fullImg')
     
     const wholeProductPage = document.querySelector('.wholeProductPage')

@@ -43,7 +43,7 @@ a {
 }
 
 .searchBar {
-    background-color: rgb(17, 15, 15);
+    background-color: rgb(45, 45, 45);
     color: white;
     border: none;
     height: 25px;
@@ -102,6 +102,7 @@ body {
 
 .productImg {
     width: 100%;
+    cursor: pointer;
 }
 
 .productTitle {
