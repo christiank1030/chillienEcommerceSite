@@ -1,0 +1,56 @@
+/* nav bar */
+
+.navBar {
+    display: flex;
+    background-color: black;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.navBarLogo {
+    margin: 2%;
+    margin-right: 22%;
+    width: 11%;
+}
+
+.navLink {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-right: 3%;
+    text-decoration: none;
+}
+
+.navLink:hover {
+    text-decoration: underline;
+}
+
+.contactLink {
+    margin-right: 100px;
+}
+
+.searchBar {
+    background-color: rgb(17, 15, 15);
+    color: white;
+    border: none;
+    height: 25px;
+    margin-left: 3%;
+    margin-right: .5%;
+    border: 1px solid white;
+}
+
+.searchButton {
+    height: 29px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 15, 15);
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    border: 1px solid white;
+    font-size: 100%;
+    margin-right: 3%;
+}
