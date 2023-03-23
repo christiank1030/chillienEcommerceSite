@@ -47,7 +47,7 @@ a {
     color: white;
     border: none;
     height: 25px;
-    margin-left: 8%;
+    margin-left: 3%;
     margin-right: .5%;
     border: 1px solid white;
 }
@@ -61,6 +61,7 @@ a {
     cursor: pointer;
     border: 1px solid white;
     font-size: 100%;
+    margin-right: 3%;
 }
 
 /* product cards */

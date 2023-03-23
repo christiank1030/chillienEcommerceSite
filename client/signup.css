@@ -21,7 +21,27 @@ a {
     resize: none;
 }
 
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    margin: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15%;
+    resize: none;
+}
+
 .signupForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,7 +69,37 @@ a {
     text-transform: uppercase;
 }
 
+.loginInput {
+    margin: 10%;
+    width: 150%;
+    height: 30px;
+    background-color: rgb(45, 45, 45);
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
 .createAcctBtn {
+    margin: 10%;
+    width: 150%;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.loginBtn {
     margin: 10%;
     width: 150%;
     height: 30px;
@@ -83,7 +133,24 @@ a {
     text-transform: uppercase;
 }
 
+.signupLink {
+    margin: 3%;
+    margin-bottom: 5%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
 .loginLink:hover {
+    text-decoration: underline;
+}
+
+.signupLink:hover {
     text-decoration: underline;
 }
 

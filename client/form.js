@@ -1,3 +1,13 @@
+// redirect to index.html if user is logged in 
+window.onload = () => {
+    if(sessionStorage.user) {
+        user = JSON.parse(sessionStorage.user)
+        if(compareToken(user.authToken, user.email)) {
+            location.replace('/')
+        }
+    }
+}
+
 const fullName = document.querySelector('#name');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
@@ -22,6 +32,11 @@ const sendData = (path, data) => {
 const processData = (data) => {
     if(data.alert) {
         showAlert(data.alert)
+    } else if(data.fullName) {
+        console.log(data)
+        data.authToken = createToken(data.email)
+        sessionStorage.user = JSON.stringify(data)
+        location.replace('/')
     }
 }
 

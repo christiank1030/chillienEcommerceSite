@@ -36,6 +36,7 @@ for(let i = 0; i < productImg.length; i++) {
             <a class="navLink" id="contactLink" href="">Contact</a>
             <input class="searchBar" type="text">
             <button class="searchButton">Search</button>
+            <a class="navLink" id="loginLink" href="./login.html">Login</a>
         </div>
 
         <!-- product page -->
@@ -119,6 +120,7 @@ for(let i = 0; i < productImg.length; i++) {
                 <a class="navLink" id="contactLink" href="">Contact</a>
                 <input class="searchBar" type="text">
                 <button class="searchButton">Search</button>
+                <a class="navLink" id="loginLink" href="./login.html">Login</a>
             </div>
         
             <!-- product page -->
@@ -276,6 +278,7 @@ for(let i = 0; i < productImg.length; i++) {
         <a class="navLink" id="contactLink" href="">Contact</a>
         <input class="searchBar" type="text">
         <button class="searchButton">Search</button>
+        
     </div>
 
     <!-- product page -->
