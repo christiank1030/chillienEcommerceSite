@@ -21,6 +21,26 @@ const Product = {
     price: productPrices
 }
 
+const sendData = (path, data) => {
+    fetch(path, {
+        method: 'post',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify(data)
+    }).then((res) => res.json())
+    .then(response => {
+        processData(response)
+    })
+}
+
+const processData = (data) => {
+    if(data.fullName) {
+        console.log(data)
+        data.authToken = createToken(data.email)
+        sessionStorage.user = JSON.stringify(data)
+    }
+}
+
+
 const htmlContainer = document.createElement('div')
 htmlContainer.id = 'htmlContainer'
 document.body.appendChild(htmlContainer)
@@ -84,6 +104,30 @@ for(let i = 0; i < productImg.length; i++) {
         </div>
 
         <script src="product.js"></script>`
+
+        // add to cart functionality 
+        const cartButton = document.querySelector('.cartButton')
+        const productName = document.querySelector('.fullProductTitle')
+        const productPrice = document.querySelector('.productPrice2')
+        const size = document.querySelectorAll('.sizeButton')
+        const quantity = document.querySelector('.quantityInput')
+        let user = JSON.parse(sessionStorage.user)
+        console.log(user.email)
+
+    
+        const addToCart = () => {
+                const data = {
+                    email: user.email,
+                    productName: productName.textContent,
+                    productPrice: productPrice.textContent,
+                    size: document.querySelector('.sizeButton.Checked').textContent,
+                    quantity: quantity.value
+                }
+
+                sendData('/cart', data)
+            }
+    
+        cartButton.addEventListener('click', addToCart())
 
     // image gallery
     const productFunction = () => {
@@ -403,4 +447,8 @@ for(let i = 0; i < productImg.length; i++) {
     })
     }, 1000)
     })
+
+
+    // add to cart functionality 
+
 }

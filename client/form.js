@@ -8,15 +8,15 @@ window.onload = () => {
     }
 }
 
-const fullName = document.querySelector('#name');
+const fullName = document.querySelector('#name') //|| null;
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
-const number = document.querySelector('#number');
+const number = document.querySelector('#number') //|| null;
 const createAcctBtn = document.querySelector('.createAcctBtn');
 const loginLink = document.querySelector('.loginLink');
+const signupLink = document.querySelector('.signupLink');
 const alertImg = document.querySelector('.alertImg');
 const errorMsg = document.querySelector('.errorMessage');
-
 
 const sendData = (path, data) => {
     fetch(path, {
@@ -42,52 +42,86 @@ const processData = (data) => {
 
 const showAlert = (alert) => {
     // hide input forms
-    fullName.classList.add('hide');
+
+    if(fullName != null) {
+        fullName.classList.add('hide');
+    }
     email.classList.add('hide');
     password.classList.add('hide');
-    number.classList.add('hide');
+    if(number != null) {
+        number.classList.add('hide');
+    }
     createAcctBtn.classList.add('hide');
-    loginLink.classList.add('hide');
+    if(loginLink != null) {
+        loginLink.classList.add('hide');
+    }
+    if(signupLink != null) {
+        signupLink.classList.add('hide')
+    }
 
     errorMsg.innerHTML = alert;
     // show alert
     alertImg.classList.remove('hide');
     errorMsg.classList.remove('hide');
     setTimeout(() => {
-        fullName.classList.remove('hide');
+        if(fullName != null) {
+            fullName.classList.remove('hide');
+        }
         email.classList.remove('hide');
         password.classList.remove('hide');
-        number.classList.remove('hide');
+        if(number != null) {
+            number.classList.remove('hide');
+        }
         createAcctBtn.classList.remove('hide');
-        loginLink.classList.remove('hide');
+        if(loginLink != null) {
+            loginLink.classList.remove('hide');
+        }
+        if(signupLink != null) {
+            signupLink.classList.remove('hide')
+        }
+    
         
         alertImg.classList.add('hide');
         errorMsg.classList.add('hide');
     }, 3000);
 }
 
-
-
-
+let userID = 1;
 
 createAcctBtn.addEventListener('click', () => {
-    // form validations
-    if(!email.value.length) {
-        showAlert('Please enter a valid email');
-    } else if(password.value.length < 8) {
-        showAlert('Password must be 8 or more characters')
-    } else if(number.value.length < 10) {
-        showAlert('Please enter a valid phone number')
-    } else if(!number.value.length) {
-        showAlert('Please enter a phone number')
+    if (fullName != null) {    
+        // form validations
+        if(!email.value.length) { // sign up page
+            showAlert('Please enter a valid email');
+        } else if(password.value.length < 8) {
+            showAlert('Password must be 8 or more characters')
+        } else if(number.value.length < 10) {
+            showAlert('Please enter a valid phone number')
+        } else if(!number.value.length) {
+            showAlert('Please enter a phone number')
+        } else {
+            // Passes user input as parameter of sendData function
+
+            sendData('/signup', {
+                fullName: fullName.value,
+                email: email.value,
+                password: password.value,
+                number: number.value,
+                cart: [],
+                id: userID 
+            })
+
+            userID++
+        }
     } else {
-        // Passes user input as parameter of sendData function
-        sendData('/signup', {
-            fullName: fullName.value,
-            email: email.value,
-            password: password.value,
-            number: number.value,
-            seller: false
-        })
+        // login page
+        if (!email.value.length || !password.value.length) {
+            showAlert('Please fill in all inputs')
+        } else {
+            sendData('/login', {
+                email: email.value,
+                password: password.value
+            })
+        }
     }
 })

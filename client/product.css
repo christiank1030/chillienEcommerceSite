@@ -30,13 +30,18 @@ body {
     margin-right: 90.5%;
     margin-top: 5%;
     margin-bottom: 5%;
-    border-bottom: 1px solid white;
+    border-bottom: .5px solid white;
 }
 
 .productCard {
     margin-left: 2%;
     padding: 2%;
     width: 25%;
+    border: 1px solid rgb(45, 45, 45);
+}
+
+.productCard:hover {
+    border: 1px solid white;
 }
 
 #secondCol {

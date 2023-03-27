@@ -7,7 +7,7 @@ require('dotenv').config();
 
 
 // Importing functions from controller.js
-const { getHTML, getSignup, signupData, getLogin } = require('./controller');
+const { getHTML, getSignup, signupData, getLogin, loginData, getCart, cartData } = require('./controller');
 
 const app = express();
 
@@ -21,6 +21,9 @@ app.get('/', getHTML);
 app.get('/signup', getSignup);
 app.post('/signup', signupData)
 app.get('/login', getLogin)
+app.post('/login', loginData)
+app.get('/cart', getCart)
+app.post('/cart', cartData)
 
 const port = 3000
 
