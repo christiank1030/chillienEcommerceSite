@@ -90,7 +90,7 @@ for(let i = 0; i < productImg.length; i++) {
                     <label for="2xlSize" class="sizeButton">2XL</label>
                     
                     <div class="addCartSection">
-                        <input class="quantityInput" type="number" placeholder="1">
+                        <input class="quantityInput" type="number" value="1">
                         <button class="cartButton">Add to Cart</button>
                     </div>  
                 </div>
@@ -123,11 +123,13 @@ for(let i = 0; i < productImg.length; i++) {
                     size: document.querySelector('.sizeButton.Checked').textContent,
                     quantity: quantity.value
                 }
+                console.log(data)
+                console.log(quantity)
 
                 sendData('/cart', data)
             }
     
-        cartButton.addEventListener('click', addToCart())
+        cartButton.addEventListener('click', addToCart)
 
     // image gallery
     const productFunction = () => {

@@ -1,5 +1,3 @@
-require('dotenv').config();
-const Sequelize = require('sequelize');
 const path = require('path');
 const bcrypt = require('bcrypt');
 
@@ -90,11 +88,23 @@ module.exports = {
                 }
             })
         }
-
     },
 
     getCart: (req, res) => {
-        res.sendFile(path.join(__dirname, 'cart.html'))
+        let email = req.query.user;
+        let cartReference = db.collection('users').doc(email);
+    
+        cartReference.get()
+        .then(function(doc) {
+            if (doc.exists) {
+                const cartData = doc.data().cart;
+                res.json(cartData);
+            } else {
+                console.log("No such document!");
+                res.sendStatus(404);
+            }
+        })
+            
     }, 
 
     cartData: (req, res) => {
@@ -116,7 +126,17 @@ module.exports = {
                 quantity: quantity
             })
         })
+    },
+
+    deleteCart: (req, res) => {
+        const email = req.query.user
+        const newData = req.body
+
+        // Referencing the cart data in db
+        db.collection('users').doc(email).update({cart: newData})
+        .then(() => {
+            // sending json response with updated data
+            res.json(newData)
+        })
     }
 }
-
-// left off trying to get addtoCart function to work
