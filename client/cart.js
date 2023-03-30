@@ -1,6 +1,7 @@
 const productContainer = document.querySelector('.productsSide')
 const totalPrice = document.querySelector('.totalHeader')
 const fullCartPage = document.querySelector('.fullCartPage')
+const checkoutButton = document.querySelector('.checkoutButton')
 let prices = []
 let data = []
 
@@ -147,3 +148,6 @@ const editQuantity = () => {
 
 editQuantity()
 
+checkoutButton.addEventListener('click', () => {
+    location.replace('/checkout.html')
+})

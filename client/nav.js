@@ -34,6 +34,11 @@
     }
 createNavBar()
 
+const navLogo = document.querySelector('.navBarLogo')
+navLogo.addEventListener('click', () => {
+    location.replace('/')
+})
+
 // Logout link and cart logo functionality
 let user = JSON.parse(sessionStorage.getItem('user'))
 if(user != null) {
