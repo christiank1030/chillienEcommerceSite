@@ -24,7 +24,7 @@ a {
     line-height: 1;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    margin-right: 1%;
+    margin-right: 3%;
     text-decoration: none;
 }
 
@@ -45,7 +45,7 @@ a {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-decoration: none;
-    margin-top: 25%;
+    margin-top: 20%;
     margin-bottom: 10%;
     cursor: pointer;
 }
@@ -78,9 +78,10 @@ a {
     background-color: rgb(45, 45, 45);
     color: white;
     border: none;
-    height: 28px;
+    height: 30px;
     margin-left: 5%;
     margin-right: .5%;
+    border: 1px solid white;
 }
 
 .searchButton {
@@ -116,9 +117,4 @@ a {
     width: 5%;
     padding: 1%;
     cursor: pointer;
-}
-
-.cartImg:hover {
-    width: 6%;
-    padding: 0%;
 }

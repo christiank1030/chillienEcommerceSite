@@ -7,7 +7,16 @@ require('dotenv').config();
 
 
 // Importing functions from controller.js
-const { getHTML, getSignup, signupData, getLogin, loginData, getCart, cartData, deleteCart } = require('./controller');
+const { getHTML, 
+        getSignup, 
+        signupData, 
+        getLogin, 
+        loginData, 
+        getCart, 
+        cartData, 
+        deleteCart,
+        editQuantity } 
+        = require('./controller');
 
 const app = express();
 

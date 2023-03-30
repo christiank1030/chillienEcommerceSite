@@ -105,6 +105,7 @@ for(let i = 0; i < productImg.length; i++) {
 
         <script src="product.js"></script>`
 
+        createNavBar()
         // add to cart functionality 
         const cartButton = document.querySelector('.cartButton')
         const productName = document.querySelector('.fullProductTitle')
@@ -112,7 +113,6 @@ for(let i = 0; i < productImg.length; i++) {
         const size = document.querySelectorAll('.sizeButton')
         const quantity = document.querySelector('.quantityInput')
         let user = JSON.parse(sessionStorage.user)
-        console.log(user.email)
 
     
         const addToCart = () => {
@@ -123,10 +123,9 @@ for(let i = 0; i < productImg.length; i++) {
                     size: document.querySelector('.sizeButton.Checked').textContent,
                     quantity: quantity.value
                 }
-                console.log(data)
-                console.log(quantity)
 
                 sendData('/cart', data)
+                cartButton.textContent = 'Item Added to Cart'
             }
     
         cartButton.addEventListener('click', addToCart)
@@ -289,12 +288,11 @@ for(let i = 0; i < productImg.length; i++) {
                 })
                 })
             })
-            }, 1000)
+        }, 1000)
     }
 
     setTimeout(function() {
     // size function
-
     const sizeButton = document.querySelectorAll('.sizeButton')
     let checkedButton = 0
 
@@ -450,7 +448,5 @@ for(let i = 0; i < productImg.length; i++) {
     }, 1000)
     })
 
-
-    // add to cart functionality 
 
 }

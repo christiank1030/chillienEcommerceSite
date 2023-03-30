@@ -17,6 +17,8 @@ const loginLink = document.querySelector('.loginLink');
 const signupLink = document.querySelector('.signupLink');
 const alertImg = document.querySelector('.alertImg');
 const errorMsg = document.querySelector('.errorMessage');
+const loginForm = document.querySelector('.loginForm');
+const signupForm = document.querySelector('.signupForm');
 
 const sendData = (path, data) => {
     fetch(path, {
@@ -88,7 +90,7 @@ const showAlert = (alert) => {
 
 let userID = 1;
 
-createAcctBtn.addEventListener('click', () => {
+const submitForm = () => {
     if (fullName != null) {    
         // form validations
         if(!email.value.length) { // sign up page
@@ -124,4 +126,23 @@ createAcctBtn.addEventListener('click', () => {
             })
         }
     }
-})
+}
+
+createAcctBtn.addEventListener('click', submitForm)
+
+// Event listeners so users can submit login/signup forms with enter button
+if(loginForm) {
+    loginForm.addEventListener('keyup', (event) => {
+        if(event.key === 'Enter') {
+            submitForm()
+        }
+    })
+}
+
+if(signupForm) {
+    signupForm.addEventListener('keyup', (event) => {
+        if(event.key === 'Enter') {
+            submitForm()
+        }
+    })
+}

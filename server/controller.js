@@ -140,3 +140,6 @@ module.exports = {
         })
     }
 }
+
+// Left off handling frontend request in editQuantity
+//      Need to put new quantity into database on controller function

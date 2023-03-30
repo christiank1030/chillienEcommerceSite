@@ -10,9 +10,10 @@ body {
     line-height: 1;
     letter-spacing: 0.05em;
     margin-left: 2%;
-    margin-right: 78%;
+    margin-right: 83.5%;
     margin-top: 5%;
     margin-bottom: 5%;
+    padding-bottom: .5%;
     border-bottom: 1px solid white;
 }
 
@@ -120,10 +121,10 @@ body {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 200;
-    font-size: 150%;
+    font-size: 135%;
     line-height: 1;
     letter-spacing: 0.05em;
-    margin-top: 10%;
+    margin-top: 15%;
     margin-bottom: 35%;
     cursor: pointer;
     text-align: center;
@@ -143,10 +144,36 @@ body {
     border: none;
     padding-top: 5%;
     padding-bottom: 5%;
+    border: 1px solid white;
 }
 
 .checkoutButton:hover {
     background-color: black;
     color: white;
     border: 1px solid white;
+}
+
+/* Empty cart styling */
+
+.emptyCartDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+.emptyCartImage {
+    width: 35%;
+}
+
+.emptyCartTitle {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    font-size: 200%;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
