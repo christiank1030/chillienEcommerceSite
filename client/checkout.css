@@ -1,0 +1,27 @@
+body {
+    margin: 0%;
+    background-color: black;
+}
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.alertImg {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    width: 30%;
+}
+
+.alertHeader {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 200%;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}

@@ -7,7 +7,7 @@ window.onload = () => {
         }
     }
 }
-
+const formLogo = document.querySelector('.signupLogo')
 const fullName = document.querySelector('#name') //|| null;
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
@@ -129,6 +129,9 @@ const submitForm = () => {
 }
 
 createAcctBtn.addEventListener('click', submitForm)
+formLogo.addEventListener('click', () => {
+    location.replace('/')
+})
 
 // Event listeners so users can submit login/signup forms with enter button
 if(loginForm) {

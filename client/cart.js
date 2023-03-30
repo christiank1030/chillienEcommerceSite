@@ -69,7 +69,7 @@ const populateCart = () => {
         emptyCart.classList.add('emptyCartDiv')
         fullCartPage.appendChild(emptyCart)
         emptyCart.innerHTML = `
-            <img class="emptyCartImage" src="./images/AlertImage.jpg" alt="">
+            <img class="emptyCartImage" src="./images/emptyCart.JPG" alt="">
             <h1 class="emptyCartTitle">Your shopping cart is empty</h1>
         `
     }

@@ -54,6 +54,7 @@ a {
     margin: 10%;
     margin-right: 14%;
     margin-bottom: 10%;
+    cursor: pointer;
 }
 
 .signupInput {
@@ -158,10 +159,10 @@ a {
 /* Alert popup */
 
 .alertImg {
-    width: 25%;
+    width: 15%;
     position: absolute;
-    top: 45%;
-    left: 37%;
+    top: 50%;
+    left: 42%;
 }
 
 .errorMessage {
