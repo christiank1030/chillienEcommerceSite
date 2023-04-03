@@ -16,19 +16,23 @@ a {
     align-items: center;
     background-image: url(./images/chillienHomePage.jpeg);
     background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: cover;
     background-position: center;
+    height: 100vh;
 }
 
 
 .welcomeHeader {
     margin-top: 25%;
     margin-bottom: 30%;
-    color: white;
+    color: black;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 200;
-    font-size: 300%;
+    font-size: 350%;
     line-height: 1;
     letter-spacing: 0.05em;
 }
 
+.welcomeSpace {
+    margin-left: 2%;
+}

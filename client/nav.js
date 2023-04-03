@@ -9,9 +9,7 @@
                 <a class="navLink" id="homeLink" href="./index.html">Home</a>
                 <a class="navLink" id="shirtLink" href="./product.html">Shirts</a>
                 <a class="navLink" id="aboutLink" href="./about.html">About</a>
-                <a class="navLink" id="contactLink" href="">Contact</a>
-                <input class="searchBar" type="text">
-                <button class="searchButton">Search</button>
+                <a class="navLink" id="contactLink" href="./contact.html">Contact</a>
                 <div class="loginInfo">
                 <a class="loggedInLink">${user.fullName}</a>
                 <a class="logoutLink">Logout</a>
@@ -24,10 +22,10 @@
                 <a class="navLink" id="homeLink" href="./index.html">Home</a>
                 <a class="navLink" id="shirtLink" href="./product.html">Shirts</a>
                 <a class="navLink" id="aboutLink" href="./about.html">About</a>
-                <a class="navLink" id="contactLink" href="">Contact</a>
-                <input class="searchBar" type="text">
-                <button class="searchButton">Search</button>
+                <a class="navLink" id="contactLink" href="./contact.html">Contact</a>
+                <div class="loginInfo">
                 <a class="navLink" id="loginLink" href="./login.html">Login</a>
+                </div>
                 <img class="cartImg" src="./images/cart.jpg" alt="">
                 `
         }
