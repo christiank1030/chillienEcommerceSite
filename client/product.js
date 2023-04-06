@@ -288,6 +288,22 @@ for(let i = 0; i < productImg.length; i++) {
                 })
                 })
             })
+
+            // Logout link and cart logo functionality
+            let user = JSON.parse(sessionStorage.getItem('user'))
+            if(user != null) {
+                const logoutLink = document.querySelector('.logoutLink')
+                const cartLogo = document.querySelector('.cartImg')
+
+                logoutLink.addEventListener('click', () => {
+                    sessionStorage.clear()
+                    location.reload()
+                })
+
+                cartLogo.addEventListener('click', () => {
+                    location.replace('/cart.html')
+                })    
+            }
         }, 1000)
     }
 
@@ -445,6 +461,22 @@ for(let i = 0; i < productImg.length; i++) {
         })
         })
     })
+
+    // Logout link and cart logo functionality
+    let user = JSON.parse(sessionStorage.getItem('user'))
+    if(user != null) {
+        const logoutLink = document.querySelector('.logoutLink')
+        const cartLogo = document.querySelector('.cartImg')
+
+        logoutLink.addEventListener('click', () => {
+            sessionStorage.clear()
+            location.reload()
+        })
+
+        cartLogo.addEventListener('click', () => {
+            location.replace('/cart.html')
+        })    
+    }
     }, 1000)
     })
 
