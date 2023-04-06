@@ -3,6 +3,7 @@ const totalPrice = document.querySelector('.totalHeader')
 const fullCartPage = document.querySelector('.fullCartPage')
 const checkoutButton = document.querySelector('.checkoutButton')
 let prices = []
+let quantities = []
 let data = []
 
 const populateCart = () => {
@@ -37,7 +38,10 @@ const populateCart = () => {
                 let size = data[i].size
                 let price = data[i].productPrice
                 prices.push(parseInt(price.slice(1)))
+                
+
                 let quantity = data[i].quantity
+                quantities.push(parseInt(quantity))
 
                 let newProductCard = document.createElement('div')
                 productContainer.appendChild(newProductCard)
@@ -57,9 +61,10 @@ const populateCart = () => {
         }
             let totalSum = 0
             for(let i = 0; i < prices.length; i++) {
-                totalSum += prices[i]
+                for(let j = 0; j < quantities.length; j++) {
+                    totalSum += (prices[i] * quantities[j])                }
             }
-            totalPrice.innerHTML = `<h3 class="totalHeader">Total: $${totalSum}`
+            totalPrice.innerHTML = `<h3 class="totalHeader">Total: $${totalSum / prices.length}`
         })
         .catch(error => {
             console.error('Error:', error);

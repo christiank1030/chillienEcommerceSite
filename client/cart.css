@@ -1,3 +1,5 @@
+/* Left off about to make cart page responsive */
+
 body {
     background-color: black;
 }
@@ -10,11 +12,11 @@ body {
     line-height: 1;
     letter-spacing: 0.05em;
     margin-left: 2%;
-    margin-right: 83.5%;
+    margin-right: 2%;
     margin-top: 5%;
     margin-bottom: 5%;
-    padding-bottom: .5%;
-    border-bottom: 1px solid white;
+    padding-bottom: 3%;
+    border-bottom: 1px solid rgb(45, 45, 45);
 }
 
 .productAndTotal {
@@ -110,7 +112,7 @@ body {
     margin: 2%;
     margin-top: 1.5%;
     width: 35%;
-    height: 30%;
+    height: 285px;
 }
 
 .totalContainer:hover {
@@ -125,7 +127,7 @@ body {
     line-height: 1;
     letter-spacing: 0.05em;
     margin-top: 15%;
-    margin-bottom: 35%;
+    margin-bottom: 15%;
     cursor: pointer;
     text-align: center;
 }
@@ -176,4 +178,16 @@ body {
     line-height: 1;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px)
+and (max-device-width: 1024px) {
+    .totalContainer {
+        width: 35%;
+        height: 150px;
+    }
+
+    .checkoutButton {
+        margin-bottom: 2%;
+    }
 }

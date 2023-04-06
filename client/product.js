@@ -78,16 +78,16 @@ for(let i = 0; i < productImg.length; i++) {
 
                     <p class="productPrice2">${productPrices[i]}</p>
 
-                    <input type="radio" name="size" value="s" checked hidden id="smallSize">
-                    <label for="smallSize" class="sizeButton Checked">S</label>
-                    <input type="radio" name="size" value="m" hidden id="mediumSize">
-                    <label for="mediumSize" class="sizeButton">M</label>
-                    <input type="radio" name="size" value="l" hidden id="largeSize">
-                    <label for="largeSize" class="sizeButton">L</label>
-                    <input type="radio" name="size" value="xl" hidden id="xlSize">
-                    <label for="xlSize" class="sizeButton">XL</label>
-                    <input type="radio" name="size" value="2xl" hidden id="2xlSize">
-                    <label for="2xlSize" class="sizeButton">2XL</label>
+                        <input type="radio" name="size" value="s" checked hidden id="smallSize">
+                        <label for="smallSize" class="sizeButton Checked">S</label>
+                        <input type="radio" name="size" value="m" hidden id="mediumSize">
+                        <label for="mediumSize" class="sizeButton">M</label>
+                        <input type="radio" name="size" value="l" hidden id="largeSize">
+                        <label for="largeSize" class="sizeButton">L</label>
+                        <input type="radio" name="size" value="xl" hidden id="xlSize">
+                        <label for="xlSize" class="sizeButton">XL</label>
+                        <input type="radio" name="size" value="2xl" hidden id="2xlSize">
+                        <label for="2xlSize" class="sizeButton">2XL</label>
                     
                     <div class="addCartSection">
                         <input class="quantityInput" type="number" value="1">
@@ -337,7 +337,7 @@ for(let i = 0; i < productImg.length; i++) {
 
         <div class="picAndPrice">
             <img class="fullImg" src=${productImgs[i]} alt="">
-            <div>
+            <div class="fullProductInfo">
                 <h1 class="fullProductTitle">${productTitles[i]}</h1>
 
                 <hr size="1" width="100%" color="white">
